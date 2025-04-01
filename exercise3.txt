@@ -1,0 +1,7 @@
+git clone https://github.com/your-Pruthvi0016/Ivc.git
+cd Ivc
+git checkout -b bug-fix
+git add error_log.txt
+git commit -m "Correct spelling and formatting errors in error_log.txt"
+git push origin bug-fix
+

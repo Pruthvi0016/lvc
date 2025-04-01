@@ -1,0 +1,33 @@
+task=1
+mkdir ProjectX
+cd ProjectX
+git init
+echo "## Project Objectives\nThis project aims to achieve..." > README.md
+git add README.md
+git commit -m "Add README.md with project objectives"
+git branch development
+task=2
+git checkout development
+echo "Development Guidelines:\n1. Follow coding standards.\n2. Write meaningful comments." > dev_notes.txt
+git add dev_notes.txt
+git commit -m "Add development notes"
+git branch feature1
+task=3
+git checkout feature1
+echo "Feature 1 Implementation Details:\n- Design module X\n- Write tests for module X" >> dev_notes.txt
+git add dev_notes.txt
+git commit -m "Add Feature 1 implementation details"
+git checkout development
+git merge feature1
+git add dev_notes.txt
+git commit -m "Resolve merge conflicts between feature1 and development"
+task=4
+echo "Temporary change to dev_notes.txt" >> dev_notes.txt
+git stash
+git checkout main
+echo "## How to Contribute\n1. Fork the repository.\n2. Submit a pull request with your changes." >> README.md
+git add README.md
+git commit -m "Update README.md with contribution guidelines"
+git checkout development
+git stash pop
+

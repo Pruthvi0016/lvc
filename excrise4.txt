@@ -1,0 +1,17 @@
+step=1
+git checkout feature-x
+echo "Initial notes about the new feature." > new_feature.md
+step=2
+git stash save "Work on new_feature.md"
+step=3
+git checkout development
+echo "Urgent fix applied" > urgent_fix.txt
+git add urgent_fix.txt
+git commit -m "Apply urgent fix"
+step=4
+git checkout feature-x
+git stash pop
+echo "Additional details about the new feature." >> new_feature.md
+git add new_feature.md
+git commit -m "expand feature details"
+
