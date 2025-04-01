@@ -16,12 +16,12 @@ git push origin development
 task=3
 echo "More detailed development notes" >> dev_notes.txt
 git commit -am "Update dev_notes.txt with detailed notes"
-git checkout main
+git checkout master
 echo "Updates from main branch" >> dev_notes.txt
 git commit -am "Update dev_notes.txt with main branch content"
 git merge development
 Initial development notes
-Updates from main branch
+Updates from master branch
 More detailed development notes
 git add dev_notes.txt
 git commit -m "Resolve merge conflict in dev_notes.txt"
